@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkblue;
+}
+
+h1 {
+    color: dodgerblue;
+}
+
+h2 {
+    color: white;
+}
+
+.message {
+    margin: 20px auto;
+    height: 50px;
+    width: 70%;
+    background-color: aquamarine;
+}
+
+.message p {
+    margin: 0;
+}
+
+.form {
+    margin: 20px auto;
+    width: 70%;
+    background-color: aquamarine;
+}
+
+.label {
+    padding-left: 50px;
+}
+
+.number {
+    margin-left: 400px;
+    margin-top: 30px;
+}
+
+.buttons {
+    margin-left: 50px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
