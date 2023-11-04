@@ -1,5 +1,18 @@
 <?php 
 
+// sessione aperta per poter ottenere la variabile da index.php
+session_start();
+
+
+// se la password è settata vado avanti
+if(isset($_SESSION['password'])){
+    // creo il componente da stampare in pagina
+    $password = $_SESSION['password'];
+} else {
+    // se la password non è settata reindirizzo alla pagina iniziale
+    header('Location: ./index.php');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +31,9 @@
     <div class="container">
         <div class="center">
             <h1>La password generata è:</h1>
-            <p>adasdasdasfsa</p>
+            <p><?php echo $password ?></p>
         </div>
+
     </div>
 </body>
 </html>

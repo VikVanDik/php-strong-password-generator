@@ -16,9 +16,9 @@ function passgenerator ($length) {
     // ciclo
     while (strlen($pass) < $length) {
         // ad ogni ciclo seleziono la stringa dell'array al numero del contatore da me definito
-        $listCharacters = $listCharacters[$i];
+        $listCharacter = $listCharacters[$i];
         // carattere random della stringa selezionata prima
-        $character = $listCharacters[rand(0, strlen($listCharacters) - 1)];
+        $character = $listCharacter[rand(0, strlen($listCharacter) - 1)];
         // concateno il carattere alla password
         $pass .= $character;
         // aumento il contatore

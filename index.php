@@ -1,6 +1,6 @@
 <?php
 // richiamo la funzione includendola dal file
-require_once __DIR__ . './functions.php';
+require_once __DIR__ . '/functions.php';
 
 $min = 8;
 $max = 32;
@@ -8,16 +8,16 @@ $message = "Scegliere una password con un minimo di $min caratteri ed un massimo
 
 if (isset($_POST['characters']) && !empty($_POST['characters'])) {
     $passlen = $_POST['characters'];
+    var_dump($passlen);
     if ($passlen < $min || $passlen > $max) {
         $message = "Errore, scegliere un numero tra $min e $max";
     } else {
 
         // avvio la sessione per poter comunicare con la pagina di successo
-        session_start()
+        session_start();
 
-        // creo la variabile da utilizzare nell'altra pagina
-        $_SESSION['password'] = 
-
+        // creo la variabile da utilizzare nell'altra pagina, la variabile è il prodotto della funzione con parametro la lunghezza ottenuta dal form
+        $_SESSION['password'] = passgenerator ($passlen);
 
 
         header('Location: ./success-page.php');
