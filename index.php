@@ -8,6 +8,8 @@ if (isset($_POST['characters']) && !empty($_POST['characters'])) {
     $passlen = $_POST['characters'];
     if ($passlen < $min || $passlen > $max) {
         $message = "Errore, scegliere un numero tra $min e $max";
+    } else {
+        header('Location: ./success-page.php');
     }
 }
 
